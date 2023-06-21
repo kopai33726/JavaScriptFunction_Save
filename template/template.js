@@ -9,9 +9,8 @@ async function test() {
   });
 
   let resdata = await response.json();
-  let data =  await resdata.data;
+  let data = await resdata.data;
 
-  
   //crate ELEMENT
 
   //
@@ -90,7 +89,7 @@ async function test() {
             const textContent = document.createElement("span");
             divChoicemain_switch.className = "choicez";
             divChoicemain_switch.id = "switch_" + data[i].p_id;
-            divChoicemain_switch.value = "false";
+            divChoicemain_switch.value = false;
             divChoicemain_switch.setAttribute("type", "checkbox");
             textContent.textContent = "ใช้งาน";
             getElementSwitch.appendChild(divChoicemain_switch);
@@ -111,7 +110,7 @@ async function test() {
             const textaccess = document.createElement("span");
             divChoiceaccessinput.className = "choicez";
             divChoiceaccessinput.id = "access_" + data[i].p_id;
-            divChoiceaccessinput.value = "false";
+            divChoiceaccessinput.value = false;
             divChoiceaccessinput.setAttribute("type", "checkbox");
             textaccess.textContent = "เข้าถึง";
             getDivchoicemain.appendChild(divChoiceaccessinput);
@@ -132,7 +131,7 @@ async function test() {
             const textcreates = document.createElement("span");
             divChoicecreatesinput.className = "choicez";
             divChoicecreatesinput.id = "create_" + data[i].p_id;
-            divChoicecreatesinput.value = "false";
+            divChoicecreatesinput.value = false;
             divChoicecreatesinput.setAttribute("type", "checkbox");
             textcreates.textContent = "สร้าง";
             getDivchoicemain.appendChild(divChoicecreatesinput);
@@ -153,7 +152,7 @@ async function test() {
             const textmodifys = document.createElement("span");
             divChoicemodifysinput.className = "choicez";
             divChoicemodifysinput.id = "modify_" + data[i].p_id;
-            divChoicemodifysinput.value = "false";
+            divChoicemodifysinput.value = false;
             divChoicemodifysinput.setAttribute("type", "checkbox");
             textmodifys.textContent = "แก้ไข";
             getDivchoicemain.appendChild(divChoicemodifysinput);
@@ -174,7 +173,7 @@ async function test() {
             const textdeletes = document.createElement("span");
             divChoicedeletesinput.className = "choicez";
             divChoicedeletesinput.id = "delete_" + data[i].p_id;
-            divChoicedeletesinput.value = "false";
+            divChoicedeletesinput.value = false;
             divChoicedeletesinput.setAttribute("type", "checkbox");
             textdeletes.textContent = "ลบ";
             getDivchoicemain.appendChild(divChoicedeletesinput);
@@ -271,7 +270,7 @@ async function test() {
                       const textContent = document.createElement("span");
                       divCheckboxlv2_switch.className = "choicez";
                       divCheckboxlv2_switch.id = "switch_" + data[i].p_id;
-                      divCheckboxlv2_switch.value = "false";
+                      divCheckboxlv2_switch.value = false;
                       divCheckboxlv2_switch.setAttribute("type", "checkbox");
                       textContent.textContent = "ใช้งาน";
                       getElementSwitch.appendChild(divCheckboxlv2_switch);
@@ -296,7 +295,7 @@ async function test() {
                       const textaccess = document.createElement("span");
                       divChoiceaccessinput.className = "choicez";
                       divChoiceaccessinput.id = "access_" + data[i].p_id;
-                      divChoiceaccessinput.value = "false";
+                      divChoiceaccessinput.value = false;
                       divChoiceaccessinput.setAttribute("type", "checkbox");
                       textaccess.textContent = "เข้าถึง";
                       getdivCheckboxlv2.appendChild(divChoiceaccessinput);
@@ -321,7 +320,7 @@ async function test() {
                       const textcreates = document.createElement("span");
                       divChoicecreatesinput.className = "choicez";
                       divChoicecreatesinput.id = "create_" + data[i].p_id;
-                      divChoicecreatesinput.value = "false";
+                      divChoicecreatesinput.value = false;
                       divChoicecreatesinput.setAttribute("type", "checkbox");
                       textcreates.textContent = "สร้าง";
                       getdivCheckboxlv2.appendChild(divChoicecreatesinput);
@@ -346,7 +345,7 @@ async function test() {
                       const textmodifys = document.createElement("span");
                       divChoicemodifysinput.className = "choicez";
                       divChoicemodifysinput.id = "modify_" + data[i].p_id;
-                      divChoicemodifysinput.value = "false";
+                      divChoicemodifysinput.value = false;
                       divChoicemodifysinput.setAttribute("type", "checkbox");
                       textmodifys.textContent = "แก้ไข";
                       getdivCheckboxlv2.appendChild(divChoicemodifysinput);
@@ -371,7 +370,7 @@ async function test() {
                       const textdeletes = document.createElement("span");
                       divChoicedeletesinput.className = "choicez";
                       divChoicedeletesinput.id = "delete_" + data[i].p_id;
-                      divChoicedeletesinput.value = "false";
+                      divChoicedeletesinput.value = false;
                       divChoicedeletesinput.setAttribute("type", "checkbox");
                       textdeletes.textContent = "ลบ";
                       getdivCheckboxlv2.appendChild(divChoicedeletesinput);
@@ -443,7 +442,7 @@ async function test() {
                   const textContent = document.createElement("span");
                   checkboxlv3_switch.className = "choicez";
                   checkboxlv3_switch.id = "switch_" + data[i].p_id;
-                  checkboxlv3_switch.value = "false";
+                  checkboxlv3_switch.value = false;
                   checkboxlv3_switch.setAttribute("type", "checkbox");
                   textContent.textContent = "ใช้งาน";
                   getElementSwitch.appendChild(checkboxlv3_switch);
@@ -464,7 +463,7 @@ async function test() {
                   const textaccess = document.createElement("span");
                   divChoiceaccessinput.className = "choicez";
                   divChoiceaccessinput.id = "access_" + data[i].p_id;
-                  divChoiceaccessinput.value = "false";
+                  divChoiceaccessinput.value = false;
                   divChoiceaccessinput.setAttribute("type", "checkbox");
                   textaccess.textContent = "เข้าถึง";
                   getcheckboxlv3.appendChild(divChoiceaccessinput);
@@ -485,7 +484,7 @@ async function test() {
                   const textcreates = document.createElement("span");
                   divChoicecreatesinput.className = "choicez";
                   divChoicecreatesinput.id = "create_" + data[i].p_id;
-                  divChoicecreatesinput.value = "false";
+                  divChoicecreatesinput.value = false;
                   divChoicecreatesinput.setAttribute("type", "checkbox");
                   textcreates.textContent = "สร้าง";
                   getcheckboxlv3.appendChild(divChoicecreatesinput);
@@ -506,7 +505,7 @@ async function test() {
                   const textmodifys = document.createElement("span");
                   divChoicemodifysinput.className = "choicez";
                   divChoicemodifysinput.id = "modify_" + data[i].p_id;
-                  divChoicemodifysinput.value = "false";
+                  divChoicemodifysinput.value = false;
                   divChoicemodifysinput.setAttribute("type", "checkbox");
                   textmodifys.textContent = "แก้ไข";
                   getcheckboxlv3.appendChild(divChoicemodifysinput);
@@ -527,7 +526,7 @@ async function test() {
                   const textdeletes = document.createElement("span");
                   divChoicedeletesinput.className = "choicez";
                   divChoicedeletesinput.id = "delete_" + data[i].p_id;
-                  divChoicedeletesinput.value = "false";
+                  divChoicedeletesinput.value = false;
                   divChoicedeletesinput.setAttribute("type", "checkbox");
                   textdeletes.textContent = "ลบ";
                   getcheckboxlv3.appendChild(divChoicedeletesinput);
@@ -840,74 +839,183 @@ async function test() {
     choice_name.addEventListener("click", function () {
       console.log(choice_pid.id);
       choice_pid.click();
+      choice_pid.value = choice_pid.checked;
+      console.log(choice_pid.checked);
     });
   });
   ////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////
 
   async function fetchupdates() {
-   
-      for (let i = 0; i < data.length; i++) {
-          const checkDiv = document.getElementById("switch_" + data[i].p_id);
-          if (checkDiv) {
-              if(data[i].switch_status == true) {
-                //   console.log(data[i].name)
-                  checkDiv.click();
-                      
+    for (let i = 0; i < data.length; i++) {
+      const checkDiv = document.getElementById("switch_" + data[i].p_id);
+      if (checkDiv) {
+        if (data[i].switch_status == true) {
+          //   console.log(data[i].name)
+          checkDiv.click();
+          checkDiv.value = true;
+        }
+
+        if (data[i].switch_status == false) {
+          checkDiv.value = false;
+        }
+      }
+      const checkDivAcess = document.getElementById("access_" + data[i].p_id);
+      if (checkDivAcess) {
+        if (data[i].access == true) {
+          //   console.log(data[i].name)
+          checkDivAcess.click();
+          checkDivAcess.value = true;
+        }
+        if (data[i].access == false) {
+          //   console.log(data[i].name)
+          checkDivAcess.value = false;
+        }
+      }
+      const checkDivModify = document.getElementById("modify_" + data[i].p_id);
+      if (checkDivAcess) {
+        if (data[i].modify == true) {
+          //   console.log(data[i].name)
+          checkDivModify.click();
+          checkDivModify.value = true;
+        }
+        if (data[i].modify == false) {
+          //   console.log(data[i].name)
+          checkDivModify.value = false;
+        }
+      }
+      const checkDivCreate = document.getElementById("create_" + data[i].p_id);
+
+      if (checkDivCreate) {
+        if (data[i].create == true) {
+          //   console.log(data[i].name)
+          checkDivCreate.click();
+          checkDivCreate.value = true;
+        }
+        if (data[i].create == false) {
+          //   console.log(data[i].name)
+          checkDivCreate.value = false;
+        }
+      }
+
+      const checkDivDelet = document.getElementById("delete_" + data[i].p_id);
+
+      // for (let j = 0; j < checkDivDelet.length; j++) {
+      //   console.log(checkDivDelet.item(j).checked);
+      if (checkDivCreate) {
+        if (data[i].delete == true) {
+          checkDivDelet.click();
+          checkDivDelet.value = true;
+        }
+        if (data[i].delete == false) {
+          //   console.log(data[i].name)
+          checkDivDelet.value = false;
+        }
+      }
+      // }
+    }
+  }
+  fetchupdates();
+  async function checkUpload() {
+    const dataupload = [];
+    const dataobj = document.querySelectorAll(".choice_main");
+    const dataobjInput = document.querySelectorAll(".choice_main > input");
+
+    for (let i = 0; i < data.length; i++) {
+      let accessvalue;
+      let accessD;
+      let switchD;
+      let createD;
+      let modifyD;
+      let deleteD;
+      for (let j = 0; j < dataobjInput.length; j++) {
+        // console.log(dataobjInput[j].id + " = " + dataobjInput[j].value);
+        const text = dataobjInput[j].id.split("_")[0];
+        const num = dataobjInput[j].id.split("_")[1];
+        if (data[i].p_id == num) {
+          console.log(dataobjInput[j]);
+          if (text == "access") {
+            accessD = dataobjInput[j].checked;
           }
+          if (text == "create") {
+            createD = dataobjInput[j].checked;
           }
-          const checkDivAcess = document.getElementById("access_" + data[i].p_id);
-          if (checkDivAcess) {
-              if(data[i].access == true) {
-                //   console.log(data[i].name)
-                  checkDivAcess.click();
-                      
+          if (text == "modify") {
+            modifyD = dataobjInput[j].checked;
           }
+          if (text == "delete") {
+            deleteD = dataobjInput[j].checked;
           }
-          const checkDivModify = document.getElementById("modify_" + data[i].p_id);
-          if (checkDivAcess) {
-              if(data[i].modify == true) {
-                //   console.log(data[i].name)
-                  checkDivModify.click();
-                      
-          }
-          }
-          const checkDivCreate= document.getElementById("create_" + data[i].p_id);
-          if (checkDivCreate) {
-              if(data[i].create == true) {
-                //   console.log(data[i].name)
-                  checkDivCreate.click();
-                      
-          }
+          if (text == "switch") {
+            switchD = dataobjInput[j].checked;
+            console.log(dataobjInput[j].checked);
           }
         }
-  }
-    fetchupdates();
-
-    ////////////////////////////////////////////////////////////////
-    //// upload data to server
-    //////////
-     
-   
-     
-
-    var dataUpload = {
-       
-        p_id: 1,
-        use_switch: true,
-        switch_status: true,
-        access: true,
-        modify: true,
-        create: true,
-        delete: true,
-        category_type: "", 
-        name: "test",
-        level: 1,
+        // null;
+        // dataobjInput[j].id === "access" ? dataobjInput[j].value : null,
+      }
+      // console.log("" + accessvalue);
+      const dataItem_pid = {
+        p_id: data[i].p_id,
+        category_type: data[i].category_type,
+        access: accessD,
+        create: createD,
+        modify: modifyD,
+        delete: deleteD,
+        use_switch: data[i].use_switch,
+        business_id: data[i].business_id,
+        level: data[i].level,
         r_id: 1,
-        bussiness_id: 1,
-        
-    };  
-    console.log(data);
-}
+        switch_status: switchD,
+        name: data[i].name,
+      };
 
+      dataupload.push(dataItem_pid);
+    }
+
+    console.log(dataupload);
+
+    let headersList = {
+      Accept: "*/*",
+      "Content-Type": "application/json",
+    };
+
+    let bodyContent = JSON.stringify({
+      obj: dataupload,
+    });
+
+    let response = await fetch(
+      "http://localhost:3333/mobile/test-update-permissions",
+      {
+        method: "POST",
+        body: bodyContent,
+        headers: headersList,
+      }
+    );
+
+    let dataR = await response.json();
+    console.log(dataR);
+  }
+  ////////////////////////////////////////////////////////////////
+  //// upload data to server
+  //////////
+  var button = document.createElement("button");
+
+  // Set the button's text
+  button.innerHTML = "Click Me";
+
+  // Set an ID for the button
+  button.id = "myButton";
+
+  // Add a click event listener to the button
+  button.addEventListener("click", function () {
+    // Function to be executed when the button is clicked
+    checkUpload();
+  });
+
+  // Append the button to the container
+  document.getElementById("footer").appendChild(button);
+
+  console.log(data);
+}
 test();
