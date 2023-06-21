@@ -1,27 +1,30 @@
 async function test() {
   let headersList = {
     Accept: "*/*",
+    "Content-Type": "application/json",
   };
+
+  let bodyContent = JSON.stringify({
+    r_id: 1,
+  });
 
   let response = await fetch("http://localhost:3333/mobile/test_permissions", {
     method: "POST",
+    body: bodyContent,
     headers: headersList,
   });
 
-  let resdata = await response.json();
-  let data = await resdata.data;
+  let dataA = await response.json();
+  let data = dataA.data;
+  console.log(data);
 
-  //crate ELEMENT
-
-  //
+  // //
   async function LenderAllElement() {
     let levelarray = 0;
     const svgArrow = "./arrow_left.svg";
-    var templateID = await document.getElementsByClassName(
-      "Adminstator_menu"
-    )[0];
+    var templateID = document.getElementsByClassName("Adminstator_menu")[0];
     if (templateID != null) {
-      var DivContentTemplate = await document.createElement("div");
+      var DivContentTemplate = document.createElement("div");
       DivContentTemplate.id = "content_menumain";
       DivContentTemplate.className = "ct_mn";
       templateID.appendChild(DivContentTemplate);
@@ -185,7 +188,7 @@ async function test() {
     // Fetch Level 2
 
     for (let z = 0; z < data.length; z++) {
-      const parent = await document.querySelector("#A_" + z);
+      const parent = document.querySelector("#A_" + z);
       const divSpace = document.querySelector("#SPACE_" + z);
 
       if (parent != null) {
@@ -390,15 +393,16 @@ async function test() {
       let sss = data[y].p_id;
       let zzz = sss.toString();
       let io;
-      let parent = await document.getElementById("contentlv2_" + zzz);
+      let parent = document.getElementById("contentlv2_" + zzz);
       if (parent != null) {
         io = parent.textContent.replace(/\s/g, "");
         // console.log(io)
         for (let i = 0; i < data.length; i++) {
           if (data[i].level == 3) {
-            let spliteCategory = data[i].category_type.split("-");
-            if (spliteCategory[1] != null) {
-              if (spliteCategory[1] == io) {
+            let spliteCategory = data[i].category_type.replace(/\n|\s/g, "");
+            let ff3 = spliteCategory.split("-")[1];
+            if (ff3 != null) {
+              if (ff3 == io) {
                 const divll3 = document.getElementById(
                   "checkbox_incontent_" + data[y].p_id
                 );
@@ -540,12 +544,12 @@ async function test() {
     }
 
     const styles_Adminstator_menu = `
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0;
-            padding: 0;
-        `;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    `;
     document.querySelectorAll(".Adminstator_menu").forEach((item) => {
       styles_Adminstator_menu.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -557,13 +561,13 @@ async function test() {
       });
     });
     const styles_ct_mn = `
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-    `;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+`;
     document.querySelectorAll(".ct_mn").forEach((item) => {
       styles_ct_mn.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -575,13 +579,13 @@ async function test() {
       });
     });
     const styles_l1_content = `
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        height: auto;
-    `;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+`;
     document.querySelectorAll(".l1_container").forEach((item) => {
       styles_l1_content.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -593,13 +597,13 @@ async function test() {
       });
     });
     const styles_checkbox_container = `
-        display: flex;
-        
-        justify-content: flex-start;
-        flex-direction: column;
-        width: auto;
-        height: auto;
-    `;
+    display: flex;
+
+    justify-content: flex-start;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+`;
     document.querySelectorAll(".checkbox_container").forEach((item) => {
       styles_checkbox_container.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -621,13 +625,13 @@ async function test() {
       });
     });
     const styles_svgImg = `
-        width: 20px;
-        height: 20px;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-    `;
+    width: 20px;
+    height: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+`;
     document.querySelectorAll(".svgImg").forEach((item) => {
       styles_svgImg.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -639,14 +643,14 @@ async function test() {
       });
     });
     const styles_choice_menumain = `
-        width: auto;
-        display:flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        margin-right: 10px;
+    width: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 10px;
 
-    `;
+`;
     document.querySelectorAll(".choice_menumain").forEach((item) => {
       styles_choice_menumain.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -658,8 +662,8 @@ async function test() {
       });
     });
     const styles_choice_input = `
-        // pointer-events: none;
-    `;
+    // pointer-events: none;
+`;
     document.querySelectorAll(".choice_main").forEach((item) => {
       styles_choice_input.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -671,8 +675,8 @@ async function test() {
       });
     });
     const styles_choicez = `
-       margin-right: 10px;
-    `;
+   margin-right: 10px;
+`;
     document.querySelectorAll(".choicez").forEach((item) => {
       styles_choicez.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -684,14 +688,14 @@ async function test() {
       });
     });
     const styles_cm_l1_tp = `
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 20px 15px;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-        cursor: pointer;
-    `;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+`;
     document.querySelectorAll(".cm_l1_tp").forEach((item) => {
       styles_cm_l1_tp.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -703,12 +707,12 @@ async function test() {
       });
     });
     const styles_cm_space = `
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 10px 25px;
-    `;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px 25px;
+`;
     document.querySelectorAll(".cm_space").forEach((item) => {
       styles_cm_space.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -723,12 +727,12 @@ async function test() {
         : (item.style.display = "flex");
     });
     const styles_cm_l2_tp = `
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 10px 25px;
-    `;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px 25px;
+`;
     document.querySelectorAll(".cm_l2_tp").forEach((item) => {
       styles_cm_l2_tp.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -740,14 +744,14 @@ async function test() {
       });
     });
     const styles_l3_container = `
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding : 10px 30px;
-        
-    `;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding : 10px 30px;
+
+`;
     document.querySelectorAll(".l3_container").forEach((item) => {
       styles_l3_container.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -763,10 +767,10 @@ async function test() {
     });
 
     const styles_cm_l3_tp = `
-        
-        padding : 10px 30px;
-        
-    `;
+
+    padding : 10px 30px;
+
+`;
     document.querySelectorAll(".cm_l3_tp").forEach((item) => {
       styles_cm_l3_tp.split(";").forEach((style) => {
         if (style.trim() !== "") {
@@ -778,7 +782,7 @@ async function test() {
       });
     });
   }
-  await LenderAllElement();
+  LenderAllElement();
   ////////////////////////////////////////////////////////////////
   //  onCLick
   ////////////////////////////////////////////////////////////////
@@ -902,7 +906,7 @@ async function test() {
 
       // for (let j = 0; j < checkDivDelet.length; j++) {
       //   console.log(checkDivDelet.item(j).checked);
-      if (checkDivCreate) {
+      if (checkDivDelet) {
         if (data[i].delete == true) {
           checkDivDelet.click();
           checkDivDelet.value = true;
@@ -915,12 +919,11 @@ async function test() {
       // }
     }
   }
-  fetchupdates();
+  await fetchupdates();
   async function checkUpload() {
     const dataupload = [];
     const dataobj = document.querySelectorAll(".choice_main");
     const dataobjInput = document.querySelectorAll(".choice_main > input");
-
     for (let i = 0; i < data.length; i++) {
       let accessvalue;
       let accessD;
@@ -957,7 +960,7 @@ async function test() {
       // console.log("" + accessvalue);
       const dataItem_pid = {
         p_id: data[i].p_id,
-        category_type: data[i].category_type,
+        category_type: data[i].category_type.replace(/\n|\s/g, ""),
         access: accessD,
         create: createD,
         modify: modifyD,
@@ -975,47 +978,49 @@ async function test() {
 
     console.log(dataupload);
 
-    let headersList = {
+    let headersListW = {
       Accept: "*/*",
+      "User-Agent": "Thunder Client",
       "Content-Type": "application/json",
     };
-
-    let bodyContent = JSON.stringify({
+    let bodyContentW = JSON.stringify({
+      r_id: 4,
       obj: dataupload,
     });
 
-    let response = await fetch(
-      "http://localhost:3333/mobile/test-update-permissions",
+    let responseA = await fetch(
+      "http://localhost:3333/mobile/test-insert-permissions",
       {
         method: "POST",
-        body: bodyContent,
-        headers: headersList,
+        body: bodyContentW,
+        headers: headersListW,
       }
     );
 
-    let dataR = await response.json();
-    console.log(dataR);
+    let dataQ = await responseA.json();
+    console.log(dataQ);
   }
   ////////////////////////////////////////////////////////////////
   //// upload data to server
   //////////
-  var button = document.createElement("button");
+  const elem = document.getElementById("footer");
+  var buttona = document.createElement("button");
 
   // Set the button's text
-  button.innerHTML = "Click Me";
+  buttona.innerHTML = "Click Me";
 
   // Set an ID for the button
-  button.id = "myButton";
+  buttona.id = "myButton";
 
   // Add a click event listener to the button
-  button.addEventListener("click", function () {
+  buttona.addEventListener("click", function () {
     // Function to be executed when the button is clicked
     checkUpload();
   });
 
   // Append the button to the container
-  document.getElementById("footer").appendChild(button);
-
-  console.log(data);
+  if (elem) {
+    elem.appendChild(buttona);
+  }
 }
 test();
