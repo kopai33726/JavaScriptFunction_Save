@@ -567,6 +567,7 @@ async function test() {
     justify-content: center;
     width: 100%;
     height: auto;
+    
 `;
     document.querySelectorAll(".ct_mn").forEach((item) => {
       styles_ct_mn.split(";").forEach((style) => {
@@ -584,7 +585,7 @@ async function test() {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: auto;
+    padding: 10px 0;
 `;
     document.querySelectorAll(".l1_container").forEach((item) => {
       styles_l1_content.split(";").forEach((style) => {
@@ -675,18 +676,25 @@ async function test() {
       });
     });
     const styles_choicez = `
-   margin-right: 10px;
+    width: 30px;
+    height: 30px;
+   margin-right: 10px; 
+   filter: hue-rotate(600deg);
 `;
-    document.querySelectorAll(".choicez").forEach((item) => {
-      styles_choicez.split(";").forEach((style) => {
-        if (style.trim() !== "") {
-          const [prtoperty, value] = style
-            .split(":")
-            .map((part) => part.trim());
-          item.style.setProperty(prtoperty, value);
+    const checkboxCheckedStyle = `
+
+    `;
+    document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+      checkbox.style.cssText = styles_choicez;
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          checkbox.style.cssText = styles_choicez;
+        } else {
+          checkbox.style.cssText += checkboxCheckedStyle;
         }
       });
     });
+
     const styles_cm_l1_tp = `
     display: flex;
     flex-direction: column;
@@ -696,8 +704,25 @@ async function test() {
     box-shadow: 0 1px 0 rgba(0,0,0,0.2);
     cursor: pointer;
 `;
+
     document.querySelectorAll(".cm_l1_tp").forEach((item) => {
       styles_cm_l1_tp.split(";").forEach((style) => {
+        if (style.trim() !== "") {
+          const [prtoperty, value] = style
+            .split(":")
+            .map((part) => part.trim());
+          item.style.setProperty(prtoperty, value);
+        }
+      });
+    });
+    const styles_choice_main = `
+    display: flex;
+    align-items: center;
+    justify-contents:center;
+    margin: 5px 0;
+`;
+    document.querySelectorAll(".choice_main").forEach((item) => {
+      styles_choice_main.split(";").forEach((style) => {
         if (style.trim() !== "") {
           const [prtoperty, value] = style
             .split(":")
@@ -984,7 +1009,7 @@ async function test() {
       "Content-Type": "application/json",
     };
     let bodyContentW = JSON.stringify({
-      r_id: 4,
+      r_id: 5,
       obj: dataupload,
     });
 

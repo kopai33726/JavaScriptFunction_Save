@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@200;400;500;800&display=swap");
+
+/* font size && weight */
+.font-noto {
+  font-family: "Inter", sans-serif;
+}
+
+.font-inter {
+  font-family: "Noto Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.container .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 25px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.namepage h3 {
+  width: 100%;
+}
+.namepage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.btn-back img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.btn-back {
+  width: 20%;
+}
+.container .content {
+  width: 100%;
+}
+.container .content .content-rule {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.content-rule #pathinsite {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  width: 100%;
+}
+.content-rule #pathinsite:hover {
+  background-color: cornflowerblue;
+}
+
+/* Accountant */
+.content-accountant {
+  width: 100%;
+  list-style: none;
+}
+.content-accountant-menu {
+  width: 100%;
+  /* background-color: rgba(95, 158, 160, 0.388); */
+  /* padding: 10px 25px; */
+}
+/* .menu-checkbox-main{
+   display: flex;
+   background-color: cadetblue;
+   align-items: center ;
+   justify-content: space-between;
+} */
+
+/* disable */
+#name-checkbox-main {
+  width: auto;
+  /* background-color: red; */
+}
+#name-checkbox-input {
+  width: auto;
+  /* background-color: blue; */
+  padding: 0 10px;
+}
+
+table {
+  width: 100%;
+  /* background-color: cadetblue; */
+}
+
+#tbl-Accountant tr td {
+  text-align: center;
+}
+#menu-accountant {
+  width: 30%;
+}
+
+/* NEW */
+.menu-checkbox-list {
+  width: 100%;
+
+  /* background-color: crimson; */
+  /* box-shadow: 0px 1px 0px rgba(0,0,0,0.2); */
+}
+.checkbox-a {
+  padding-bottom: 10px;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-a-name {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px 0px 25px;
+}
+.dropdownmenu-list-a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px 0px 55px;
+}
+.dropdownmenu-list-ab {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px 0px 70px;
+}
+.dropdownmenu-list-b {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px 0px 85px;
+}
+.dropdownmenu-list-c {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px 0px 100px;
+}
+.dropdownmenu-list-b {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px 0px 85px;
+}
+
+.checkbox-a-listmenucheck {
+  /* background-color: cadetblue; */
+}
+.listmenu-name {
+  width: 40%;
+  /* background-color: crimson; */
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  padding: 5px 0 5px 15px;
+  margin-left: 50px;
+}
+.listmenu-name span,
+.listmenu-name-a span,
+.listmenu-name-b span,
+.listmenu-name-c span {
+  margin-left: 15px;
+}
+.dropdownicon img {
+  display: flex;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+}
+.dropdownicon {
+  padding: 10px;
+  /* background-color: cadetblue; */
+}
+.checkbox-a-name:hover,
+.dropdownmenu-list-a:hover {
+  cursor: pointer;
+}
+.name-menu {
+  margin-left: 5px;
+}
+.listmenu-name-a {
+  /* background-color: crimson; */
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  padding: 5px 0 5px 95px;
+}
+.listmenu-name-b {
+  /* background-color: crimson; */
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  padding: 5px 0 5px 110px;
+}
+.listmenu-name-c {
+  /* background-color: crimson; */
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  padding: 5px 0 5px 140px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: cronflowerblue;
+  pointer-events: none;
+}
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 200px;
+}
